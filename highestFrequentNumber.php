@@ -1,11 +1,12 @@
 <?php
+
 # PHP Program: Find the Highest Frequent Number
 function highestFrequentNumber($arr)
 {
-    $frequency = array_count_values($arr); // Count occurrences of each number
-    $maxFreq = max($frequency); // Find the highest frequency
+    $frequency = array_count_values($arr);
+    $maxFreq = max($frequency);
 
-    $mostFrequentNumbers = array_keys($frequency, $maxFreq); // Get numbers with max frequency
+    $mostFrequentNumbers = array_keys($frequency, $maxFreq);
 
     return $mostFrequentNumbers;
 }
@@ -18,13 +19,11 @@ echo "Highest frequent number(s): " . implode(", ", $result) . "\n";
 
 
 
-
-
 function loophighestFrequentNumber($arr)
 {
     $frequency = [];
 
-    // Count occurrences using a loop
+    # Count occurrences using a loop
     foreach ($arr as $num) {
         if (isset($frequency[$num])) {
             $frequency[$num]++;
@@ -33,7 +32,7 @@ function loophighestFrequentNumber($arr)
         }
     }
 
-    // Find the highest frequency
+    # Find the highest frequency
     $maxFreq = 0;
     foreach ($frequency as $count) {
         if ($count > $maxFreq) {
@@ -41,7 +40,7 @@ function loophighestFrequentNumber($arr)
         }
     }
 
-    // Find numbers with the highest frequency
+    # Find numbers with the highest frequency
     $mostFrequentNumbers = [];
     foreach ($frequency as $num => $count) {
         if ($count == $maxFreq) {

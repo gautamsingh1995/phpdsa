@@ -11,11 +11,11 @@ function oppositePyramid($n)
         for ($k = 0; $k < 2 * $i - 1; $k++) {
             echo "*";
         }
+
         if ($i !== 1) {
             echo "\n";
         }
     }
-
 }
 
 function pyramid($n)
@@ -28,7 +28,6 @@ function pyramid($n)
 
         for ($k = 0; $k < 2 * $i - 1; $k++) {
             echo "*";
-
         }
         echo "\n";
     }
