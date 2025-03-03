@@ -25,7 +25,6 @@ function countVowels($strs)
 $strs = 'Gautam Singh';
 var_dump(countVowels($strs)); // output 4
 
-
 function countVowelsForeach($str)
 {
     $vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -38,7 +37,6 @@ function countVowelsForeach($str)
             $count++;
         }
     }
-
     return $count;
 }
 

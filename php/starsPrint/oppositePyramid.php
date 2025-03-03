@@ -1,32 +1,22 @@
 <?php
-function leftAngledTriangle($n)
+function oppositePyramid($n)
 {
-    for ($i = 0; $i <= $n; $i++) {
+    for ($i = $n; $i >= 1; $i--) {
 
         for ($j = 0; $j < $n - $i; $j++) {
             echo " ";
         }
 
-        for ($k = 0; $k <= $i; $k++) {
+        for ($k = 0; $k < $i * 2 - 1; $k++) {
             echo "*";
         }
-
         echo "\n";
     }
 }
 
 // Call function
-leftAngledTriangle(5);
+OppositePyramid(5);
 
-/*
-
-    *
-   ***
-  *****
- *******
-*********
-
-*/
 
 
 function printSpaces($count)
@@ -39,21 +29,19 @@ function printStars($count)
     echo str_repeat("*", $count);
 }
 
-function leftAngledTriangles($n)
+function oppositePyramids($n)
 {
-    for ($i = 0; $i <= $n; $i++) {
+    $range = range($n, 1); // Create an array from $n to 1
+
+    foreach ($range as $i) {
         printSpaces($n - $i);  // Print spaces
-        printStars($i + 1);     // Print stars
+        printStars($i * 2 - 1); // Print stars
         echo "\n";
     }
 }
 
 // Call function
-leftAngledTriangles(5);
-
-
-
-
+oppositePyramids(5);
 
 
 ?>

@@ -20,7 +20,6 @@ function longestUniqueSubstringForeach($str)
             $longestSubstring = substr($str, $start, $maxLength);
         }
     }
-
     return $longestSubstring;
 
 }
