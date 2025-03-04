@@ -1,3 +1,8 @@
+/* 
+    Stars Print the Left Angle Triangle.
+
+ */
+
 function leftAngledTriangle(n) {
     for (let i = 0; i < n; i++) {
         let row = "";
